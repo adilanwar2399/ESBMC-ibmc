@@ -32,3 +32,51 @@ Then utilise the benchmark (C program) that you need to generate the correct inv
 Then specify the conditions of the output and the form that the output will appear in plus any constraints or extra contextual information may help as well.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The tool has 6 pipelines exploring 3 different approaches in this integration. 
+
+1. Using Full vs Constrained Prompts to generate invariants for the benchmarks. 
+2. Using Full vs Constrained Prompts to generate invariants for the benchmarks - whilst using regular expressions (regex).
+3. Using Both Prompts to generate invariants - with and without regex, respectively.
+
+Stages of the Project Pipeline: 
+
+1. Detect For loops iteratively.
+2. Ask the LLM to generate an invariant for each loop. 
+3. Requirements:
+
+
+   a. GPT 3.5 Turbo-Instruct is being used (OpenAI).
+
+
+
+   b. Good Prompting for LLMs (Chain of thought used; Tree of thought is also a popular choice).
+   
+5. Ask the respective LLM to generate only loop invariants that are going to be placed before each loop.
+6. Check whether the generated loop invariant can be parsed (implementation is done via using regex); if the generated responses match the pattern defined through the regular expression then the rest of the pipeline will execute - otherwise it will regenerate and re-match until the match is successful) - this reduces the parsing errors and increases the number of useful iterations per benchmark.
+   - Note: This step is skipped if regex is not used in the pipelines. 
+7. Repeat for the next loop (multiple loops check is under development so current pipeline skips this step).
+8. Once done, call ESBMC-Vampire.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+References: 
+
+1. https://platform.openai.com/docs/api-reference
+2. https://platform.openai.com/docs/guides/text-generation
+3. https://platform.openai.com/docs/guides/prompt-engineering/strategy-write-clear-instructions
+4. https://github.com/FrontAnalyticsInc/data-winners/blob/main/generation-api-openai/openai-text-generation-examples-in-python.ipynb
+5. https://stackoverflow.com/questions/31126596/saving-response-from-requests-to-file
+6. http://www.java2s.com/Code/Python/File/AddingLineNumberstoaPythonScript.htm
+7. https://chat.openai.com/
+8. https://stackoverflow.com/questions/48797580/how-to-add-line-numbers-in-a-list
+9. https://docs.python.org/3/c-api/index.html
+10. https://www.geeksforgeeks.org/python-os-path-join-method/
+11. https://stackoverflow.com/questions/10377998/how-can-i-iterate-over-files-in-a-given-directory
+12. https://mathai2023.github.io/papers/28.pdf
+13. https://arxiv.org/pdf/2302.11382.pdf
+14. https://stackoverflow.com/questions/19389490/how-do-pythons-any-and-all-functions-work
+15. https://www.w3schools.com/python/ref_func_map.asp
+16. https://stackoverflow.com/questions/65333658/how-to-join-values-of-map-in-python
+17. https://docs.python.org/3/library/re.html
+18. https://stackoverflow.com/questions/64173161/python-regular-expression-substitution-function-using-lambda-in-the-replacement
