@@ -59,6 +59,23 @@ Stages of the Project Pipeline:
 8. Once done, call ESBMC-Vampire.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Experimental Setup: 
+
+The requirements are that you have either a macOS or a Linux OS (Ubuntu or Debian) as the tools that need installing require at least one of these operating systems preferably Linux as it is easier. 
+
+Binary Files for both Operating Systems will be available here: 
+- ESBMC
+- Vampire
+
+Seahorn: 
+- This tool's build version can be installed via the github link here: https://github.com/seahorn/seahorn
+- Alternatively, this could be ran via the docker - instructions to install and run this via the docker are also in the link above.
+- And then you can run the files using the commands mentioned in the repo.
+
+VeriAbs: 
+- Here you will need the script of veriabs which can be obtained via downloading the latest version of VeriAbs and make sure that you also have the sv-benchmark properties in particular the unreach_call.prp to ensure that veriabs can run properly with the execution commands.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 References: 
 
