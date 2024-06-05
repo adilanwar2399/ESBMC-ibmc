@@ -77,8 +77,7 @@ VeriAbs:
 
 Pipeline: 
 
-To run the pipelines the paths to ESBMC and Vampire need to be updated with the correct syntax mention in this repository: https://github.com/ibnyusuf/esbmc-vampire-project.git
-and alongside this the path to the code2inv ibmc benchmarks need to be added to the pipeline.py file that you want to run. Also, you need to have an OpenAI API account in order to create an OPENAI API KEY allowing the LLM to generate invariants that can then be used as intended in the pipeline code.
+To run the pipelines the paths to ESBMC and Vampire need to be updated with the correct syntax and alongside this the path to the code2inv ibmc benchmarks need to be added to the pipeline.py file that you want to run. Also, you need to have an OpenAI API account in order to create an OPENAI API KEY allowing the LLM to generate invariants that can then be used as intended in the pipeline code.
 
 Alternatively, the invariants of the solved benchmarks can be added and then the can be inserted into the c benchmarks and then tested by ESBMC and Vampire to see if Verification is Successful or not.
 
