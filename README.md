@@ -41,16 +41,25 @@ A number of benchmarks referred to in the paper that are not amongst the 133 ben
 
 This folder contains a set of Python scripts for invoking our LLM pipelines. As mentioned in the paper, we developed 6 pipelines each of which invokes ChatGPT to annotate the benchmarks contained in the ibmc_benchmarks folder with invariants and then calls the ESBMC ibmc tool on the annotated benchmarks.
 
-The names of the Python scripts directly link them with the pipelines discussed in the paper. The folder also contains a pair of Python scripts `Prompt_Examples.py` and `Prompt_Examples_2.py`. These are used the pipeline scripts, but can be ignored by users of the repository. We discuss how to run the pipelines below.
+The names of the Python scripts directly link them with the pipelines discussed in the paper. The folder also contains a pair of Python scripts `Prompt_Examples.py` and `Prompt_Examples_2.py`. These are used by the pipeline scripts, but can be ignored by users of the repository. We discuss how to run the pipelines below.
 
-# Running ESBMC ibmc tool
+# Running ESBMC with Vampire
 
-The binaries of ESBMC and Vampire tools can be obtained by downloading one of the releases linked to this repo (if this has not already been done). The command to run ESBMC ibmc is then:
+The binaries of ESBMC and Vampire tools can be obtained by downloading one of the releases linked to this repo (if this has not already been done). The command to run ESBMC with Vampire to verify a benchmark:
 
-`<path to ESBMC> <path to benchmark> --vampire-for-loops --ir --output <output file name> --vampire-path <path to Vampire executable> --no-bounds-check`
+`<path to ESBMC executable> <path to benchmark> --vampire-for-loops --ir --output <output file name> --vampire-path <path to Vampire executable> --no-bounds-check`
 
 Note that for verification to succeed the benchmark must contain suitable invariants. It thus makes sense to invoke the tool on one of the benchmarks in the ibmc_benchmarks_with_invariants folder.
 
 # Running the pipelines
 
+Assuming that you are located in the root folder of this repo, the following commands can be used to execute any of the pipelines. Note that the pipelines invoke ChatGPT to obtain the candidate invariants and hence it is necessary to have a OpenAI API key. To allow the scripts to make use of this key please set the environment variable `key_for_the_API` to hold your key. This can be done as follows:
 
+`export key_for_the_API="<your key>"`
+
+To run a pipeline do:
+
+`cd Code_Pipelines`
+`python3 <pipeline name> <path to ESBMC executable> <path to Vampire executable>`
+
+This will start the pipeline running on all the benchmarks contained in the ibmc_benchmarks folder. 
