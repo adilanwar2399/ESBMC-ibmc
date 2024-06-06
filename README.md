@@ -3,6 +3,46 @@
 
 This repository contains tools, scripts and benchmarks relating to the paper titled _LLM-Generated Invariants For Bounded Model Checking Without Loop Unrolling_.
 
+The folder structure is as follows:
+
+root
+ |
+ |- Benchmarks
+ |    |
+ |    | - ibmc_benchmarks
+ |    | 
+ |    | - ibmc_benchmarks_with_invariants
+ |    |
+ |    | - SeaHorn_benchmarks
+ |    |
+ |     - paper_benchmarks
+ |
+  - Code_Pipelines
+  
+We briefly mention what each folder contains:
+
+## Benchmarks
+
+A set of benchmarks that we refer to in our paper and test our tools on.
+
+### ibmc_benchmarks
+
+A set of 133 benchmarks originating from the [code2inv repository](https://github.com/PL-ML/code2inv/tree/master/benchmarks/C_instances/c). We have updated the benchmarks to use assertion syntax recognised by ESBMC and VeriAbs tools.
+
+### ibmc_benchmarks_with_invariants
+
+The same 133 benchmarks as above, but in this case loops are marked with valid invariants. The invariants are identified by a special function '__invariant(...)' that only our development branch of ESBMC (included in this release) can currently recognise.
+
+### SeaHorn_benchmarks
+
+Again, the same 133 benchmarks mentioned above, but in this instance the assertions are per the SeaHorn verifier's syntax. 
+
+### paper_benchmarks
+
+A number of benchmarks referred to in the paper that are not amongst the 133 benchmarks included in the other benchmark folders.
+
+# Running ESBMC ibmc tool
+
 Here is the tool invariant based bounded model checking (ibmc) tool that is based on the ESBMC-Vampire Integration with LLMs Project. 
 
 This project contains the pipelines to test the prompt engineering with the ChatGPT LLM 3.5 Turbo-Instruct Model in order to generate invariants for various c programs from the code2inv benchmark set. 
