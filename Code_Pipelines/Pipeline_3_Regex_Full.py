@@ -253,7 +253,7 @@ for name_of_the_c_benchmark_file in os.listdir(c_benchmarks):
             generated_modified_code = response['choices'][0]['text'].strip()
             print (generated_modified_code)
 
-            generated_modified_code_format= generated_modified_code_format = re.compile(r"__invariant\((\w|\s|\|\||&&|!|=|<|>|\?|:|\(|\))*\);")
+            generated_modified_code_format = re.compile(r"__invariant\((\w|\s|\|\||&&|!|=|<|>|\?|:|\(|\))*\);")
             print (generated_modified_code_format)
 
             generated_modified_code_format_lines = generated_modified_code.split('\n')
