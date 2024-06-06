@@ -60,6 +60,7 @@ Assuming that you are located in the root folder of this repo, the following com
 To run a pipeline do:
 
 `cd Code_Pipelines`
+
 `python3 <pipeline name> <path to ESBMC executable> <path to Vampire executable>`
 
 This will start the pipeline running on all the benchmarks contained in the ibmc_benchmarks folder. 
