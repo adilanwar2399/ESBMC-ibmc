@@ -5,19 +5,15 @@ This repository contains tools, scripts and benchmarks relating to the paper tit
 
 The folder structure is as follows:
 
+```
 root
- |
- |- Benchmarks
- |    |
- |    | - ibmc_benchmarks
- |    | 
- |    | - ibmc_benchmarks_with_invariants
- |    |
- |    | - SeaHorn_benchmarks
- |    |
- |     - paper_benchmarks
- |
-  - Code_Pipelines
+├───Benchmarks
+│   ├───ibmc_benchmarks
+│   ├───ibmc_benchmarks_with_invariants
+│   ├───paper_benchmarks
+│   └───SeaHorn_Benchmarks
+└───Code_Pipelines
+```
   
 We briefly mention what each folder contains:
 
