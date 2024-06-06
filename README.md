@@ -45,7 +45,7 @@ The names of the Python scripts directly link them with the pipelines discussed 
 
 # Running ESBMC with Vampire
 
-The binaries of ESBMC and Vampire tools can be obtained by downloading one of the releases linked to this repo (if this has not already been done). *Please note that we have included separate binaries of both tools for macOS and Ubuntu. These binaries have been built and tested on Sonoma 14.5 and Ubuntu 20.04 respectively. We expect them to work with other versions of macOS and Linux, but have not tested them ourselves*
+The binaries of ESBMC and Vampire tools can be obtained by downloading one of the releases linked to this repo (if this has not already been done). **Please note that we have included separate binaries of both tools for macOS and Ubuntu. These binaries have been built and tested on Sonoma 14.5 and Ubuntu 20.04 respectively. We expect them to work with other versions of macOS and Linux, but have not tested them ourselves.**
 
  The command to run ESBMC with Vampire to verify a benchmark:
 
