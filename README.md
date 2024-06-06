@@ -1,5 +1,7 @@
-# LLM-Generated-Invariants-For-Bounded-Model-Checking-Without-Loop-Unrolling
+# LLM-Generated Invariants For Bounded Model Checking Without Loop Unrolling
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This repository contains tools, scripts and benchmarks relating to the paper titled _LLM-Generated Invariants For Bounded Model Checking Without Loop Unrolling_.
 
 Here is the tool invariant based bounded model checking (ibmc) tool that is based on the ESBMC-Vampire Integration with LLMs Project. 
 
