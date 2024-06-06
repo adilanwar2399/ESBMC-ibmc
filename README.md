@@ -27,7 +27,7 @@ A set of 133 benchmarks originating from the [code2inv repository](https://githu
 
 ### ibmc_benchmarks_with_invariants
 
-The same 133 benchmarks as above, but in this case all benchmarks that can successfully be verified by the ESBMC ibmc tool have their loops marked with the invariants that the tool generated and validated. The invariants are identified by a special function '__invariant(...)' that only our development branch of ESBMC (included in this release) can currently recognise.
+The same 133 benchmarks as above, but in this case all benchmarks that can successfully be verified by the ESBMC ibmc tool have their loops marked with the invariants that the tool generated and validated. The invariants are identified by a special function `__invariant(...)` that only our development branch of ESBMC (included in this release) can currently recognise.
 
 ### SeaHorn_benchmarks
 
