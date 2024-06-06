@@ -53,7 +53,7 @@ Note that for verification to succeed the benchmark must contain suitable invari
 
 # Running the pipelines
 
-Assuming that you are located in the root folder of this repo, the following commands can be used to execute any of the pipelines. Note that the pipelines invoke ChatGPT to obtain the candidate invariants and hence it is necessary to have a OpenAI API key. To allow the scripts to make use of this key please set the environment variable `key_for_the_API` to hold your key. This can be done as follows:
+Assuming that you are located in the root folder of this repo, the following commands can be used to execute any of the pipelines. Note that the pipelines invoke ChatGPT to obtain the candidate invariants and hence it is necessary to have a OpenAI API key to run the pipelines. To allow the scripts to make use of this key please set the environment variable `key_for_the_API` to hold your key. This can be done as follows:
 
 `export key_for_the_API="<your key>"`
 
