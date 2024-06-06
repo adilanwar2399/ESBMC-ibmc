@@ -47,7 +47,9 @@ The names of the Python scripts directly link them with the pipelines discussed 
 
 The binaries of ESBMC and Vampire tools can be obtained by downloading one of the releases linked to this repo (if this has not already been done). The command to run ESBMC with Vampire to verify a benchmark:
 
-`<path to ESBMC executable> <path to benchmark> --vampire-for-loops --ir --output <output file name> --vampire-path <path to Vampire executable> --no-bounds-check`
+```
+<path to ESBMC executable> <path to benchmark> --vampire-for-loops --ir --output <output file name> --vampire-path <path to Vampire executable> --no-bounds-check
+```
 
 Note that for verification to succeed the benchmark must contain suitable invariants. It thus makes sense to invoke the tool on one of the benchmarks in the ibmc_benchmarks_with_invariants folder.
 
@@ -55,7 +57,9 @@ Note that for verification to succeed the benchmark must contain suitable invari
 
 Assuming that you are located in the root folder of this repo, the following commands can be used to execute any of the pipelines. Note that the pipelines invoke ChatGPT to obtain the candidate invariants and hence it is necessary to have a OpenAI API key to run the pipelines. To allow the scripts to make use of this key please set the environment variable `key_for_the_API` to hold your key. This can be done as follows:
 
-`export key_for_the_API="<your key>"`
+```
+export key_for_the_API="<your key>"
+```
 
 To run a pipeline do:
 
