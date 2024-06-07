@@ -43,9 +43,36 @@ This folder contains a set of Python scripts for invoking our LLM pipelines. As 
 
 The names of the Python scripts directly link them with the pipelines discussed in the paper. The folder also contains a pair of Python scripts `Prompt_Examples.py` and `Prompt_Examples_2.py`. These are used by the pipeline scripts, but can be ignored by users of the repository. We discuss how to run the pipelines below.
 
+# Obtaining ESBMC and Vampire
+
+The ESBMC ibmc tool requires to binaries to run. A binary of the ESBMC verifier and a binary of the first-order superposition prover Vampire.
+
+## Obtaining ESBMC
+
+ESBMC binaries for macOS Sonomoa and Ubuntu 20.04 can be found as releases attached to this repo. **We expect them to work with other versions of macOS and Linux, but have not tested them ourselves.**
+
+## Obtaining Vampire
+
+To obtain the exact version of Vampire we used in our benchmarking runs, we recommend building Vampire from source. This can be achieved as follows.
+
+```
+git clone https://github.com/vprover/vampire.git
+```
+```
+cd vampire
+```
+```
+git checkout 61ac5403f04de58b0b172b1bd889355dd326b9aa
+```
+
+Then follow the instructions at the [Vampire Github repo](https://github.com/vprover/vampire) to build. To obtain results similar to ours we recommend building with Z3.
+
+As an alternative to building from source, you can [download Vampire 4.7](https://github.com/vprover/vampire/releases/tag/v4.7). We have not tested with Vampire 4.7, but expect it to work.
+
+
 # Running ESBMC with Vampire
 
-The binaries of ESBMC and Vampire tools can be obtained by downloading one of the releases linked to this repo (if this has not already been done). **Please note that we have included separate binaries of both tools for macOS and Ubuntu. These binaries have been built and tested on Sonoma 14.5 and Ubuntu 20.04 respectively. We expect them to work with other versions of macOS and Linux, but have not tested them ourselves.**
+After completing the instructions from the previous section, you should have working binaries for ESBMC and Vampire on your system.
 
  The command to run ESBMC with Vampire to verify a benchmark:
 
