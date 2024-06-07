@@ -39,7 +39,7 @@ A number of benchmarks referred to in the paper that are not amongst the 133 ben
 
 ## Code_Pipelines
 
-This folder contains a set of Python scripts for invoking our LLM pipelines. As mentioned in the paper, we developed 6 pipelines each of which invokes ChatGPT to annotate the benchmarks contained in the ibmc_benchmarks folder with invariants and then calls the ESBMC ibmc tool on the annotated benchmarks.
+This folder contains a set of Python scripts for invoking our LLM pipelines. As mentioned in the paper, we developed 6 pipelines which invoke ChatGPT in different ways to generate candidate invariants.
 
 The names of the Python scripts directly link them with the pipelines discussed in the paper. The folder also contains a pair of Python scripts `Prompt_Examples.py` and `Prompt_Examples_2.py`. These are used by the pipeline scripts, but can be ignored by users of the repository. We discuss how to run the pipelines below.
 
