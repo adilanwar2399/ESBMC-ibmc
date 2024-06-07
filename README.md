@@ -77,7 +77,7 @@ After completing the instructions from the previous section, you should have wor
  The command to run ESBMC with Vampire to verify a benchmark:
 
 ```
-<path to ESBMC executable> <path to benchmark> --vampire-for-loops --ir --output <output file name> --vampire-path <path to Vampire executable> --no-bounds-check
+<path to ESBMC executable> <path to c benchmark file> --vampire-for-loops --ir --output <output file name> --vampire-path <path to Vampire executable> --no-bounds-check
 ```
 
 Note that for verification to succeed the benchmark must contain suitable invariants. It thus makes sense to invoke the tool on one of the benchmarks in the ibmc_benchmarks_with_invariants folder.
