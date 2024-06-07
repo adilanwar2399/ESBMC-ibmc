@@ -49,7 +49,7 @@ The ESBMC ibmc tool requires to binaries to run. A binary of the ESBMC verifier 
 
 ## Obtaining ESBMC
 
-ESBMC binaries for macOS Sonomoa and Ubuntu 20.04 [can be found in release](https://github.com/adilanwar2399/LLM-Generated-Invariants-For-Bounded-Model-Checking/releases/tag/v1.0) attached to this repo. **We expect them to work with other versions of macOS and Linux, but have not tested them ourselves.**
+ESBMC binaries for macOS Sonomoa and Ubuntu 20.04 [can be found in a release](https://github.com/adilanwar2399/LLM-Generated-Invariants-For-Bounded-Model-Checking/releases/tag/v1.0) attached to this repo. **We expect them to work with other versions of macOS and Linux, but have not tested them ourselves.**
 
 ## Obtaining Vampire
 
