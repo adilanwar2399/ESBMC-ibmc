@@ -67,7 +67,7 @@ git checkout 61ac5403f04de58b0b172b1bd889355dd326b9aa
 
 Then follow the instructions at the [Vampire Github repo](https://github.com/vprover/vampire) to build. To obtain results similar to ours we recommend building with Z3.
 
-As an alternative to building from source, you can [download Vampire 4.7](https://github.com/vprover/vampire/releases/tag/v4.7). We have not tested with Vampire 4.7, but expect it to work.
+As an alternative to building from source, you can [download Vampire 4.7](https://github.com/vprover/vampire/releases/tag/v4.7). We have not tested with Vampire 4.7, but expect it to work. Please not that the binary included in the Vampire releases will only run on Linux distros, no macOS.
 
 
 # Running ESBMC with Vampire
