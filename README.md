@@ -57,6 +57,14 @@ Note that for verification to succeed the benchmark must contain suitable invari
 
 # Running the pipelines
 
+We have tested the running the pipeline script with Python version 3.10.11. We expect them to work with similar versions of Python, but cannot guarantee it. The scripts require the Python  `openai` package at version 0.28. This can be installed by:
+
+```
+python3 -m pip install openai==0.28
+```
+
+Users are welcome to use a virtual environment.
+
 Assuming that you are located in the root folder of this repo, the following commands can be used to execute any of the pipelines. Note that the pipelines invoke ChatGPT to obtain the candidate invariants and hence it is necessary to have a OpenAI API key to run the pipelines. To allow the scripts to make use of this key please set the environment variable `key_for_the_API` to hold your key. This can be done as follows:
 
 ```
