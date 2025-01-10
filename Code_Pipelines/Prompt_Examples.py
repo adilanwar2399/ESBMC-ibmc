@@ -287,4 +287,166 @@ code_example_3 = """
                             In summary, the step-by-step explanation clarifies how each loop invariant holds true from initialization through each iteration until termination, ensuring the correctness of the assertion in relation to the loop's behaviour.
                             “. 
 """
+code_example_4 = """
+            "
+                extern void abort(void);
+                extern void __assert_fail(const char *, const char *, unsigned int, const char *) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));
+                void reach_error() { __assert_fail("0", "vnew2.c", 3, "reach_error"); }
+                extern void abort(void);
+                void assume_abort_if_not(int cond) {
+                 if(!cond) {abort();}
+                }
+                void __VERIFIER_assert(int cond) {
+                 if (!(cond)) {
+                   ERROR: {reach_error();abort();}
+                 }
+                 return;
+                }
 
+                #define FORALL(Var, Type, Cond)       \
+                 Type Var;                           \
+                 __invariant(__forall(Var, Cond));   \
+
+                #define EXISTS(Var, Type, Cond)       \
+                 Type Var;                           \
+                 __invariant(__exists(Var, Cond));   \
+
+                int __VERIFIER_nondet_int();
+
+                int main()  
+                {
+                  int xin = __VERIFIER_nondet_int(); 
+                  int yin = __VERIFIER_nondet_int();
+                  int z = __VERIFIER_nondet_int();
+                  __VERIFIER_assume(xin >=0);
+                  __VERIFIER_assume(yin >= 0);
+                  int x = xin;
+                  int y = yin;
+                  int result = 0;
+                  
+                  __invariant(result + x == xin);
+                  __invariant(x>=0);
+                  while (x > 0) 
+                  {
+                    { 
+                      xin = xin;
+                      result = result + 1; 
+                      x = x - 1;
+                    }
+                  }
+                  __invariant(result + y == xin + yin);
+                  __invariant(y>=0);
+                  while (y > 0) 
+                  {
+                      yin = yin;
+                      xin = xin;
+                    { 
+                      result = result + 1; 
+                      y = y - 1;
+                    }  
+                  }
+                  __VERIFIER_assert(result == xin + yin);
+                }
+
+
+                To understand how the invariants in the code were synthesized and why they ensure the assertion `result == xin + yin` holds, let’s break it down step-by-step. We analyze the loops and their semantics to derive the invariants.
+
+                ---
+
+                ### **1. Analysis of the First Loop**
+                The first loop reduces `x` until it reaches zero while incrementing `result`.
+
+                #### **Key Variables at Start**
+                - `xin`: The initial value of `x`, which remains constant throughout.
+                - `x`: Decreases by 1 in each iteration.
+                - `result`: Starts at 0 and increments by 1 in each iteration.
+
+                #### **Loop Dynamics**
+                - Each iteration updates:
+                  - `x = x - 1`
+                  - `result = result + 1`
+                - The relationship between `x`, `result`, and `xin` needs to be maintained across iterations.
+
+                #### **Synthesizing the Invariant**
+                1. Initially, the sum of `result` and `x` equals `xin`:
+                   
+                   result + x = xin
+                   
+                   This equality is true initially because `result` starts at 0 and `x` starts at `xin`.
+
+                2. During each iteration:
+                   - `result` increases by 1 and `x` decreases by 1. These updates keep the sum result + x constant at xin.
+
+                3. The invariant:
+                   
+                   result + x = xin
+                   
+                   is preserved in every iteration.
+
+                4. Non-negativity of `x`:
+                   - Since `x` starts at `xin >= 0` and decreases by 1 each time, it’s clear that x >= 0 during the loop.
+
+                #### **Final Invariant for First Loop**
+                - result + x = xin
+                - x >= 0
+
+                ---
+
+                ### **2. Analysis of the Second Loop**
+                The second loop reduces `y` until it reaches zero while further incrementing `result`.
+
+                #### **Key Variables at Start**
+                - `yin`: The initial value of `y`, which remains constant.
+                - `y`: Decreases by 1 in each iteration.
+                - `result`: Starts with the value obtained after the first loop.
+
+                #### **Loop Dynamics**
+                - Each iteration updates:
+                  - `y = y - 1`
+                  - `result = result + 1`
+                - The relationship between `result`, `y`, `xin`, and `yin` needs to be maintained across iterations.
+
+                #### **Synthesizing the Invariant**
+                1. Before this loop begins:
+                   - The result of the first loop ensures:
+                     
+                     result = xin
+                     
+                   - At this point, the new invariant to track is the sum result + y = xin + yin, where yin is the original value of y
+
+                2. During each iteration:
+                   - `result` increases by 1 and `y` decreases by 1. These updates keep the sum result + y constant at xin + yin.
+
+                3. The invariant:
+                   
+                   result + y = xin + yin
+                   
+                   is preserved in every iteration.
+
+                4. Non-negativity of `y`:
+                   - Since `y` starts at yin >= 0  and decreases by 1 each time, it’s clear that y >= 0 during the loop.
+
+                #### **Final Invariant for Second Loop**
+                -> result + y = xin + yin}
+                -> y>=0
+
+                ---
+
+                ### 3. Why Do These Invariants Ensure the Assertion Holds?
+
+                At the end of both loops:
+                1. After the first loop:
+                   -> x = 0, so:
+                     
+                     result = xin
+                     
+
+                2. After the second loop:
+                   -> y = 0, so:
+                    
+                     result = xin + yin
+                     
+
+                The assertion result = xin + yin follows directly from these invariants. By ensuring the invariants hold in both loops, the program guarantees the final assertion is valid.
+            "
+"""
