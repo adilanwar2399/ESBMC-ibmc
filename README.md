@@ -50,7 +50,7 @@ The ESBMC ibmc tool requires to binaries to run. A binary of the ESBMC verifier 
 
 ## Obtaining ESBMC
 
-ESBMC binaries for macOS Sonomoa and Ubuntu 20.04 can be found [here](https://drive.google.com/drive/folders/1-2Efeg2xq_U2rFsyT77ynK5aTJSyuAYz?usp=drive_link). **We expect them to work with other versions of macOS and Linux, but have not tested them ourselves.**
+ESBMC binaries for macOS Sonoma and Ubuntu 20.04 can be found [here](https://drive.google.com/drive/folders/1-2Efeg2xq_U2rFsyT77ynK5aTJSyuAYz?usp=drive_link). **We expect them to work with other versions of macOS and Linux, but have not tested them ourselves.**
 
 ## Obtaining Vampire
 
