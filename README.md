@@ -5,6 +5,8 @@ This repository contains tools, scripts and benchmarks relating to the tool ESBM
 
 This tool extension's contents and details are mentioned in the paper titled _LLM-Generated Invariants For Bounded Model Checking Without Loop Unrolling_.
 
+This is the Overall Pipeline of the Tool: 
+
 ![ESBMC ibmc Pipeline Diagram](Images/ESBMC_ibmc_Pipeline.jpeg)
 
 The folder structure is as follows:
