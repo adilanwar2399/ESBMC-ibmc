@@ -12,10 +12,10 @@ root
 ├───Benchmarks
 │   ├───ibmc_benchmarks
 │   ├───ibmc_benchmarks_with_invariants
+│   ├───ibmc_code2inv_parsable_benchmarks
 │   ├───paper_benchmarks
 │   ├───SeaHorn_Benchmarks
 │   └───Multiple_Loops
-│   └───ibmc_code2inv_parsable_benchmarks
 └───Code_Pipelines
 ```
   
@@ -33,6 +33,10 @@ A set of 133 benchmarks originating from the [code2inv repository](https://githu
 
 The same 133 benchmarks as above, but in this case all benchmarks that can successfully be verified by the ESBMC ibmc tool have their loops marked with the invariants that the tool generated and validated. The invariants are identified by a special function `__invariant(...)` that only our development branch of ESBMC (instruction on how to obtain provided below) can currently recognise.
 
+### ibmc_code2inv_parsable_benchmarks
+
+The same 133 benchmarks are used as mentioned above. We have updated the benchmarks to use in the Blackbox based pipelines. 
+
 ### SeaHorn_benchmarks
 
 Again, the same 133 benchmarks mentioned above, but in this instance the assertions are per the SeaHorn verifier's syntax. 
@@ -44,10 +48,6 @@ A number of benchmarks referred to in the paper that are not amongst the 133 ben
 ### Multiple_Loops
 
 A number of benchmarks that are not part of the paper, they contain multiple loops. 
-
-### ibmc_code2inv_parsable_benchmarks
-
-A set of 133 benchmarks originating from the [code2inv repository](https://github.com/PL-ML/code2inv/tree/master/benchmarks/C_instances/c). We have updated the benchmarks to use in the Blackbox based pipelines. 
 
 ## Code_Pipelines
 
