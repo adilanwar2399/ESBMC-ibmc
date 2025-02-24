@@ -1,7 +1,7 @@
 # The ESBMC ibmc (Invariant Based Model Checking) Tool
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This repository contains tools, scripts and benchmarks relating to the tool ESBMC-ibmc - which is an extension of the tool ESBMC (Efficient SMT-Based Context Bounded Model Checker). 
+This repository contains tools, scripts and benchmarks relating to the tool ESBMC ibmc - which is an extension of the tool ESBMC (Efficient SMT-Based Context Bounded Model Checker). 
 
 This tool extension's contents and details are mentioned in the paper titled _LLM-Generated Invariants For Bounded Model Checking Without Loop Unrolling_.
 
