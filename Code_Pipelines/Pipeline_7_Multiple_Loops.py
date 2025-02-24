@@ -9,7 +9,7 @@ from collections import defaultdict
 
 openai.api_key = os.getenv("key_for_the_API")
 
-c_benchmarks = '../Benchmarks/multiple_loops/'
+c_benchmarks = '../Benchmarks/Multiple_Loops/'
 
 c_benchmark_time_limit = 600 
 
