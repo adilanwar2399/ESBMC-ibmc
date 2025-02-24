@@ -17,6 +17,7 @@ root
 │   ├───SeaHorn_Benchmarks
 │   └───Multiple_Loops
 └───Code_Pipelines
+└───Images
 ```
   
 We briefly mention what each folder contains:
