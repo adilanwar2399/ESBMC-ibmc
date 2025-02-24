@@ -45,7 +45,7 @@ A number of benchmarks referred to in the paper that are not amongst the 133 ben
 
 A number of benchmarks that are not part of the paper, they contain multiple loops. 
 
-### ibmc_benchmarks
+### ibmc_code2inv_parsable_benchmarks
 
 A set of 133 benchmarks originating from the [code2inv repository](https://github.com/PL-ML/code2inv/tree/master/benchmarks/C_instances/c). We have updated the benchmarks to use in the Blackbox based pipelines. 
 
