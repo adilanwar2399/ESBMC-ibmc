@@ -28,7 +28,7 @@ We briefly mention what each folder contains:
 
 ## Benchmarks
 
-A set of benchmarks that we refer to in our paper and test our tools on.
+A set of benchmarks that some of which we refer to in our paper, whilst others are not as research is currently happening on this, and test our tools on.
 
 ### ibmc_benchmarks
 
