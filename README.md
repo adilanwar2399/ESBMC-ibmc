@@ -37,13 +37,13 @@ The same 133 benchmarks as above, but in this case all benchmarks that can succe
 
 The same 133 benchmarks are used as mentioned above. We have updated the benchmarks to use in the Blackbox based pipelines. 
 
-### SeaHorn_benchmarks
-
-Again, the same 133 benchmarks mentioned above, but in this instance the assertions are per the SeaHorn verifier's syntax. 
-
 ### paper_benchmarks
 
 A number of benchmarks referred to in the paper that are not amongst the 133 benchmarks included in the other benchmark folders.
+
+### SeaHorn_benchmarks
+
+Again, the same 133 benchmarks mentioned above, but in this instance the assertions are per the SeaHorn verifier's syntax. 
 
 ### Multiple_Loops
 
