@@ -1,7 +1,9 @@
-# LLM-Generated Invariants For Bounded Model Checking Without Loop Unrolling
+# ESBMC-ibmc
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This repository contains tools, scripts and benchmarks relating to the paper titled _LLM-Generated Invariants For Bounded Model Checking Without Loop Unrolling_.
+This repository contains tools, scripts and benchmarks relating to the tool ESBMC-ibmc - which is an extension of the tool ESBMC (Efficient SMT-Based Context Bounded Model Checker). 
+
+This tool extension's contents and details are mentioned in the paper titled _LLM-Generated Invariants For Bounded Model Checking Without Loop Unrolling_.
 
 The folder structure is as follows:
 
@@ -13,6 +15,7 @@ root
 │   ├───paper_benchmarks
 │   ├───SeaHorn_Benchmarks
 │   └───Multiple_Loops
+│   └───ibmc_code2inv_parsable_benchmarks
 └───Code_Pipelines
 ```
   
@@ -42,11 +45,17 @@ A number of benchmarks referred to in the paper that are not amongst the 133 ben
 
 A number of benchmarks that are not part of the paper, they contain multiple loops. 
 
+### ibmc_benchmarks
+
+A set of 133 benchmarks originating from the [code2inv repository](https://github.com/PL-ML/code2inv/tree/master/benchmarks/C_instances/c). We have updated the benchmarks to use in the Blackbox based pipelines. 
+
 ## Code_Pipelines
 
 This folder contains a set of Python scripts for invoking our LLM pipelines. As mentioned in the paper, we developed 6 pipelines which invoke ChatGPT in different ways to generate candidate invariants.
 
 The names of the Python scripts directly link them with the pipelines discussed in the paper. The folder also contains a pair of Python scripts `Prompt_Examples.py` and `Prompt_Examples_2.py`. These are used by the pipeline scripts, but can be ignored by users of the repository. We discuss how to run the pipelines below.
+
+Note: The Pipeline_7_Multiple_Loops.py pipeline uses a modified prompt and the temperature of 0.3 to generate successful results - further testing on all the code2inv benchmarks is needed. 
 
 # Obtaining ESBMC and Vampire
 
