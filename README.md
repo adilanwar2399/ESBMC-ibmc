@@ -1,4 +1,4 @@
-# The ESBMC ibmc (Invariant Based Model Checking (Tool Extension))
+# The ESBMC ibmc (Invariant Based Model Checking)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This repository contains tools, scripts and benchmarks relating to the tool ESBMC-ibmc - which is an extension of the tool ESBMC (Efficient SMT-Based Context Bounded Model Checker). 
