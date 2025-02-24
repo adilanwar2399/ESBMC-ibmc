@@ -60,7 +60,7 @@ This folder contains a set of Python scripts for invoking our LLM pipelines. As 
 
 The names of the Python scripts directly link them with the pipelines discussed in the paper. The folder also contains a pair of Python scripts `Prompt_Examples.py` and `Prompt_Examples_2.py`. These are used by the pipeline scripts, but can be ignored by users of the repository. We discuss how to run the pipelines below.
 
-Note: The Pipeline_7_Multiple_Loops.py pipeline uses a modified prompt and the temperature of 0.3 to generate successful results - further testing on all the code2inv benchmarks is needed. 
+Note: The Pipeline_7_Multiple_Loops.py pipeline uses a modified prompt and the temperature of 0.3 to generate successful results - further testing on all the code2inv benchmarks is underway. 
 
 # Obtaining ESBMC and Vampire
 
