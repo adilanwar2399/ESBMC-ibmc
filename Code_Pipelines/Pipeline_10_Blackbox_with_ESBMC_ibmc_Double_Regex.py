@@ -68,7 +68,7 @@ def find_defined_variables_at_while_entry(ast):
         
         
         if isinstance(node, c_ast.Compound):
-            # Save current scope
+           
             scope_stack.append(current_scope.copy())
             for _, child in node.children():
                 traverse_node(child)
