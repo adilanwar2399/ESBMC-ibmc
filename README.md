@@ -21,6 +21,7 @@ root
 │   ├───SeaHorn_Benchmarks
 │   └───Multiple_Loops
 ├───Code_Pipelines
+├───Code_Pipelines_Local
 └───Images
 ```
   
