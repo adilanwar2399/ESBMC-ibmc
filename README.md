@@ -134,7 +134,7 @@ This will start the named pipeline running on all the benchmarks contained in th
 # Using the ESBMC ibmc wrapper
 
 ```
-./esbmc-ibmc-wrapper.py -a 32 -p <Path to Property File> benchmark
+./esbmc-ibmc-wrapper.py -a <32 or 64> -p <Path to Property File> benchmark
 ```
 
 Note the benchmark mentioned above will be a benchmark present in the folder - but the benchmark directory inside the script that is running e.g. Blackbox Only or the Ollama Pipeline script will execute all the benchmarks inside that directory (regardless of the benchmark present in the command above).
