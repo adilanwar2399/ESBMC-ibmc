@@ -137,13 +137,25 @@ This will start the named pipeline running on all the benchmarks contained in th
 ./esbmc-ibmc-wrapper.py -a <32 or 64> -p <Path to Property File> benchmark
 ```
 
-Note the benchmark mentioned above will be a benchmark present in the folder - but the benchmark directory inside the script that is running e.g. Blackbox Only or the Ollama Pipeline script will execute all the benchmarks inside that directory (regardless of the benchmark present in the command above).
+Note: The benchmark mentioned above will be a benchmark present in the folder - but the benchmark directory inside the script that is running e.g. Blackbox Only or the Ollama Pipeline script will execute all the benchmarks inside that directory (regardless of the benchmark present in the command above).
 
-Also pycparser needs to be installed in order to run the pipelines called inside the wrapper. 
+Also pycparser needs to be installed using the command below in order to run the pipelines called inside the wrapper:
+
+```
+pip install pycparser
+```
 
 Also permissions need to be given to the files in order to run them by running this command: 
 
 ```
 chmod +x <filename>
+```
+
+Note: in the script folder all the necessary files need to be present i.e. the binary executables for esbmc and vampire for example and having the benchmarks alongside the Prompt Examples 1 and 2 files and the 3 scripts including the wrapper. 
+
+You can check to see if the files have permissions already or not by running this command inside the correct directory: 
+
+```
+ls -l
 ```
 
