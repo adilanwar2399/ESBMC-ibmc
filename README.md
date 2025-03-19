@@ -22,7 +22,8 @@ root
 │   └───Multiple_Loops
 ├───Code_Pipelines
 ├───Code_Pipelines_Local
-└───Images
+├───Images
+└───Scripts
 ```
   
 We briefly mention what each folder contains:
@@ -129,3 +130,20 @@ python3 <pipeline name> <path to ESBMC executable> <path to Vampire executable>
 ```
 
 This will start the named pipeline running on all the benchmarks contained in the ibmc_benchmarks folder. 
+
+# Using the ESBMC ibmc wrapper
+
+```
+./esbmc-ibmc-wrapper.py -a 32 -p <Path to Property File> benchmark
+```
+
+Note the benchmark mentioned above will be a benchmark present in the folder - but the benchmark directory inside the script that is running e.g. Blackbox Only or the Local Pipeline script will execute all the benchmarks inside that directory (regardless of the benchmark present in the command above).
+
+Also pycparser needs to be installed in order to run the pipelines called inside the wrapper. 
+
+Also permissions need to be given to the files in order to run them by running this command: 
+
+```
+chmod +x <filename>
+```
+
