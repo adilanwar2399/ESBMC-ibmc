@@ -206,7 +206,7 @@ def get_result_string(the_result):
 esbmc_path = "./esbmc "
 vampire_path_new = "./vampire_z3_rel_master_6948 "
 script_bb = "./Pipeline_8_Blackbox_Only.py "
-script_ibmc_bb = "./Pipeline_1_Llama_Blackbox_with_ESBMC_ibmc_Double_Regex.py "
+script_ibmc_bb = "./blackbox_llama.py "
 ibmc_benchmarks = "./ibmc_code2inv_parsable_benchmarks/ "
 
 # ESBMC default commands: this is the same for every submission
