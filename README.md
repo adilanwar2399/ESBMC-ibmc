@@ -139,6 +139,12 @@ This will start the named pipeline running on all the benchmarks contained in th
 
 Note: The benchmark mentioned above will be a benchmark present in the folder - but the benchmark directory inside the script that is running e.g. Blackbox Only or the Ollama Pipeline script will execute all the benchmarks inside that directory (regardless of the benchmark present in the command above).
 
+This command is needed to install ollama.
+
+```
+pip install ollama
+```
+
 Also pycparser needs to be installed using the command below in order to run the pipelines called inside the wrapper:
 
 ```
