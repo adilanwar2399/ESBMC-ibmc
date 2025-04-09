@@ -34,7 +34,7 @@ A set of benchmarks that some of which we refer to in our paper, whilst others a
 
 ### ibmc_benchmarks
 
-A set of 133 benchmarks originating from the [code2inv repository](https://github.com/PL-ML/code2inv/tree/master/benchmarks/C_instances/c). We have updated the benchmarks to use assertion syntax recognised by ESBMC and VeriAbs tools.
+A set of 133 benchmarks originating from the [code2inv repository](https://github.com/PL-ML/code2inv/tree/master/benchmarks/C_instances/c). We have updated the benchmarks to use assertion syntax recognised by ESBMC tool.
 
 ### ibmc_benchmarks_with_invariants
 
