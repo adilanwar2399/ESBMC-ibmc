@@ -147,7 +147,9 @@ def parse_c_program(c_code):
 
 def main():
 
-    c_benchmarks = './ibmc_code2inv_parsable_benchmarks/'
+    # c_benchmarks = './ibmc_code2inv_parsable_benchmarks/'
+
+    c_benchmarks = "./test/"
 
     c_benchmark_time_limit = 2000 
 
@@ -218,7 +220,9 @@ def main():
                         else:
                             print("No defined variables at the entry to this while loop.")
 
-                invariant_candidates_bb = '\n'.join(f'__invariant({expr});' for expr in boolean_expressions)
+                # invariant_candidates_bb = '\n'.join(f'__invariant({expr});' for expr in boolean_expressions)
+
+                invariant_candidates_bb = '\n'.join({f"__invariant({next(iter(boolean_expressions))});"})
                 
                 new_code = c_code.split('\n')
                 for insertion_index, line in enumerate(new_code):
